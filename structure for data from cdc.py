@@ -9,34 +9,40 @@ csv_f = csv.reader(f)
 #determine male or female based on column_x sex question 1 for male, 2 for female #g collum equals [6] x
 for all in csv_f:
     sex_code = all[6]
-   # question_male = all[]
-    #question_female = all[]
+    question_male = all[625]
+    question_female = all[626]
     
     try:
-        if int(sex_code) <= 1:
-            print(sex_code, "male") 
+        if int(sex_code) == 1:
+            print(question_male, "male")
         #add write command to write out the record of males and their responses to the sex orientation question 
         
         else:
-            print(sex_code, "female")
+            print(question_female, "female")
             #add write command to write out the record of females and their responses to the sex orientation question
             
     except:
         print(sex_code, "nonbinary")
+            
+   #having trouble under here with getting except to be accepted 
+   #try:
+       # if int(question_male) == 3:
+        #    print("bisexual")
         
+     #   else int(question_male) == 2:
+      #      print("str8")
+            
+            
 f.close()
-#next step: find column that corresponds with ASL220_00.000
-    #asisim male sex orientation wz
-    #asisif female sex orientation xa 
-    
-#step_3: determine female
-    #acisif =
-    
-#step_4 find column that correspons with ASL240_00.000
+#next step: find column that corresponds with ASL220_00.000 and ASL240_00.000 x
+    #asisim male sex orientation wz 624
+    #asisif female sex orientation xa 625
 
 
 #import another dataset
     
 #do same shit
     
-#write to a json file of just those datasets from larger national survey 
+#write to a json file of just those datasets from larger national survey
+
+#compare together surveys using a visual tool
