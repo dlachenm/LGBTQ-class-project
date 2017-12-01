@@ -6,6 +6,8 @@ import csv
 
 f = open("samadult_2016.csv")
 csv_f = csv.reader(f)
+next(csv_f, None)
+
 #determine male or female based on column_x sex question 1 for male, 2 for female #g collum equals [6] x
 for all in csv_f:
     sex_code = all[6]
@@ -23,21 +25,23 @@ for all in csv_f:
             
     except:
         print(sex_code, "nonbinary")
-            
-   #having trouble under here with getting except to be accepted 
-   #try:
-       # if int(question_male) == 3:
-        #    print("bisexual")
+            #having trouble under here with getting except to be accepted x solved mattattack 
+    #if int(question_male) == 3:
+     #   print("bisexual")
         
-     #   else int(question_male) == 2:
-      #      print("str8")
-            
-            
-f.close()
-#next step: find column that corresponds with ASL220_00.000 and ASL240_00.000 x
-    #asisim male sex orientation wz 624
-    #asisif female sex orientation xa 625
+    #if int(question_male) == 2:
+     #   print("str8")
+    # do it for females too
+      #write out to .json?
+    
+f.close("samadult_2016.csv")
 
+#next step: find column that corresponds with ASL220_00.000 and ASL240_00.000 x
+    #asisim male sex orientation wz 624 x
+    #asisif female sex orientation xa 625 x
+
+
+#eliminate numbers and just tally male bi and female bi and compare 
 
 #import another dataset
     
