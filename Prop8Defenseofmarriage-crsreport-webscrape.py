@@ -34,5 +34,9 @@ for a_div in all_crs_reports:
         a_report_data = {"title":title_text,"date":date_text, "summary":summary_text}
  
         all_data.append(a_report_data)
-        print (all_data)
+        f=open("Prop8.txt", "w", encoding="utf-8")
+        f.write(title_text+"\r\n")
+        f.write(summary_text)
+        f.close()
+##        print (all_data)
         

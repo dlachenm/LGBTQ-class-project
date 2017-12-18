@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 
 import requests, re
 
-url = "https://www.everycrsreport.com/reports/R42976.html"
+url = "https://www.everycrsreport.com/reports/R40795.html"
 
 
 crs_report = requests.get(url, verify=False)
@@ -34,23 +34,10 @@ for a_div in all_crs_reports:
         a_report_data = {"title":title_text,"date":date_text, "summary":summary_text}
  
         all_data.append(a_report_data)
-        f=open("samesexmarriage.txt", "w", encoding="utf-8")
+        f=open("LegalDontAsk.txt", "w", encoding="utf-8")
         f.write(title_text+"\r\n")
         f.write(summary_text)
         f.close()
+##        print(all_data)
         
-##        print (all_data)
         
-        
-    
-    
-     
- 
-            
-     
-
-     
-     
-
-
-
